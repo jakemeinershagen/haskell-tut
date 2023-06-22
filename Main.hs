@@ -1,5 +1,10 @@
 module Main where
 
+--line comment
+{-
+block comment {-nested block comment. idk why you would use this but it works-}
+-}
+
 x = 5
 y = (6, "Hello")
 z = x * fst y
@@ -32,4 +37,17 @@ bar 1 = 5
 bar 2 = 2
 bar _ = -1
 
-main = putStrLn("Hi World")
+{- 
+recursion (defining function piece-wise)
+'factorial (n - 1)' in the second line is the recursive call
+-}
+factorial 1 = 1
+factorial n = n * factorial (n - 1)
+
+--length of list using recursion
+-- this is prefixed as my_ so the comiler doesn't choke
+my_length [] = 0
+my_length n = 1 + list_length (tail n)
+
+-- main = putStrLn(factorial 14)
+main = putStrLn("hello world")

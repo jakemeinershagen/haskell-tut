@@ -20,7 +20,24 @@ Some commands to run/compile a file (ex name is Test.hs):
 
 [Haskell Prelude Docs](https://hackage.haskell.org/package/base-4.18.0.0/docs/Prelude.html)
 
+let allows you to define locally scoped variables.
+
+pg38 discusses using infix functions (in haskell these are the symbols ex: + - ++) as prefix or prefix funcs as infix. Kinda weird and probably ill advised stylewise
+
+when doing the factorial example I was trying numbers up 100+ 1000+ and was seeing a lot of trailing zeros. i thought this might be an artifact of precision or something but I guess not. turns out it's just kind of how factorials work. https://math.stackexchange.com/questions/2392599/why-do-factorials-of-big-numbers-have-so-many-trailing-zeros
+
+
+this was the tutorial version of list length
+my_length [] = 0
+my_length (x:xs) = 1 + my_length xs
+the x:xs is pattern matching you can think of the : as the prepend operator then the following are identical
+[1,2,3]
+1:[1,2]
+1:2:[3]
+1:2:3:[]
+so with the list I used [1,2,3,4,5] the tuts example should read it like 1:[2,3,4,5] on the first function call and then pass [2,3,4,5] to the recursive call which will read it as 2:[3,4,5] and so on to the base case. I think...
 
 
 
-left off: pg37
+https://wiki.haskell.org/Programming_guidelines
+left off: 
