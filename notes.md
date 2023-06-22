@@ -40,4 +40,4 @@ so with the list I used [1,2,3,4,5] the tuts example should read it like 1:[2,3,
 
 
 https://wiki.haskell.org/Programming_guidelines
-left off: 
+left off pg: 40
