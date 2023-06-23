@@ -47,7 +47,20 @@ factorial n = n * factorial (n - 1)
 --length of list using recursion
 -- this is prefixed as my_ so the comiler doesn't choke
 my_length [] = 0
-my_length n = 1 + list_length (tail n)
+my_length n = 1 + my_length (tail n)
+
+my_filter filter_func [] = []
+my_filter filter_func list =
+    if filter_func (head list)
+        then head list : my_filter filter_func (tail list)
+        else my_filter filter_func (tail list)
+
+-- p is filtering function
+tut_filter p [] = []
+tut_filter p (head:tail) =
+    if p head
+        then head : tut_filter p tail
+        else tut_filter p tail
 
 -- main = putStrLn(factorial 14)
 main = putStrLn("hello world")
