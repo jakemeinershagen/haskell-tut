@@ -37,7 +37,9 @@ the x:xs is pattern matching you can think of the : as the prepend operator then
 1:2:3:[]
 so with the list I used [1,2,3,4,5] the tuts example should read it like 1:[2,3,4,5] on the first function call and then pass [2,3,4,5] to the recursive call which will read it as 2:[3,4,5] and so on to the base case. I think...
 
+tutorial is wrong on pg42. should be System.IO instead of IO
 
+to import random I had to do `cabal install --lib --package-env .. random` which created an environment folder in the haskell directory. now when I run ghci in the project directory (whick is inside the haskell directory) it spits out `Loaded package environment from /home/jake/programming/haskell/.ghc.environment.x86_64-linux-8.8.4` when starting.
 
 https://wiki.haskell.org/Programming_guidelines
-left off pg: 41
+left off pg: 43
